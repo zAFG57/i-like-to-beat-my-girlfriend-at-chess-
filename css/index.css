@@ -19,12 +19,10 @@ h2 {
     position: relative;
     text-align: center;
     font-size: 2.75em;
-    /*
-        id forme arondit ou image parchemin
-    */
-    width: max-content;
+    width: 25vw;
     left: 50%;
     transform: translate(-50%);
+    padding: 15px;
 }
 
 #options {
@@ -47,7 +45,10 @@ h2 {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) rotate(45deg);
+    height: 85px;
+    aspect-ratio: 1/1;
+    background-color: var(--purple);
 }
 
 .moitié-selectionée {
@@ -59,9 +60,22 @@ h2 {
 }
 
 .moitié-looser h2 {
-    color: var(--green);
+    color: var(--purple);
+    background: radial-gradient(
+        ellipse at center,
+        var(--light-purple) 0%,
+        var(--light-purple) 30%,
+        transparent 70%
+    );
 }
 
 .moitié-selectionée h2 {
-    color: var(--light-green);
+    color: var(--light-purple);
+    background: radial-gradient(
+        ellipse at center,
+        var(--purple) 0%,
+        var(--purple) 30%,
+        transparent 70%
+    );
 }
+
